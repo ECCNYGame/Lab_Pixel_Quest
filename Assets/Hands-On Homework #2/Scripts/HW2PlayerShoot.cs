@@ -29,7 +29,7 @@ public class HW2PlayerShoot : MonoBehaviour
     {
         if (!_canShoot)
         {
-            _currentTime -= Timer.deltaTime;
+            _currentTime -= Time.deltaTime;
 
             if (_currentTime < 0)
             {
