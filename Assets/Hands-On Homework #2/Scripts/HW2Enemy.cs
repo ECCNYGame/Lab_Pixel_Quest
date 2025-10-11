@@ -9,7 +9,7 @@ public class HW2Enemy : MonoBehaviour
     //==================================================================================================================
 
     //Movement Controls 
-    public Rigidbody2D rigidbody2D; //The rigidbody that will move the bullet 
+    public Rigidbody2D Rigidbody2D; //The rigidbody that will move the bullet 
     public float minSpeed = 1f;           //Speed at which the bullet moves 
     public float maxSpeed = 4f;           //Speed at which the bullet moves 
 
@@ -38,7 +38,7 @@ public class HW2Enemy : MonoBehaviour
 
     public void SetSpeed(Vector3 newSpeed)
     {
-        rigidbody2D.velocity = newSpeed * Random.Range(minSpeed,maxSpeed);
+        GetComponent<Rigidbody2D>().velocity = newSpeed * Random.Range(minSpeed,maxSpeed);
     }
 
     //==================================================================================================================

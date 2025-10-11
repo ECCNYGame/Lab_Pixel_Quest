@@ -12,17 +12,8 @@ public class HW2PlayerShoot : MonoBehaviour
 
     private void Update()
     {
-
        TimerMethod();
-
-        if(Input.GetKeyDown(KeyCode.Mouse0) && _canShoot)
-        {
-            GameObject bullet = Instantiate(preFab, bulletSpawn.position, Quaternion.identity);
-
-            bullet.transform.SetParent(bulletTrash);
-
-            _canShoot = false;
-        }
+       Shoot();
     }
 
     private void TimerMethod()
@@ -36,6 +27,18 @@ public class HW2PlayerShoot : MonoBehaviour
                 _canShoot = true;
                 _currentTime = Timer;
             }
+        }
+    }
+
+    private void Shoot()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && _canShoot)
+        {
+            GameObject bullet = Instantiate(preFab, bulletSpawn.position, Quaternion.identity);
+
+            bullet.transform.SetParent(bulletTrash);
+
+            _canShoot = false;
         }
     }
 }
