@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class GeoController : MonoBehaviour 
 {
+    private Rigidbody2D _rigidbody2D;
+    public int speed = 4;
     string variable1 = "Hello ";
+
     // Start is called before the first frame update
     void Start()
     {
         string variable2 = "World";
-        Debug.Log(variable1+variable2);
+        Debug.Log(variable1 + variable2);
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+// Update is called once per frame
+void Update()
+{
+    float horizontal = Input.GetAxis("Horizontal");
+    _rigidbody2D.velocity = new Vector2(horizontal * speed, _rigidbody2D.velocity.y);
+}
+
 }
