@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Geo_Quest/Scenes/Level_3.unity
     guid: aa96b116ff667e742a0745ce4f209fa9
+  - enabled: 1
+    path: Assets/Geo_Quest/Scenes/End_Scene.unity
+    guid: 2fa83ddb6bdcd6d428b61a1665ffce7c
   - enabled: 0
     path: Assets/Scenes/Level_2.unity
     guid: f9555ef8cf6b50447922872cea2af702
