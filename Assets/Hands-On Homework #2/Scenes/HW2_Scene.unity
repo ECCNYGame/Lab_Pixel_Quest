@@ -597,7 +597,6 @@ GameObject:
   - component: {fileID: 371426102}
   - component: {fileID: 371426103}
   - component: {fileID: 371426104}
-  - component: {fileID: 371426105}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -749,25 +748,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   preFab: {fileID: 7854287240566403132, guid: 1ea6bd9350d50894899d6d0e9622592e, type: 3}
-  preFab2: {fileID: 0}
+  preFab2: {fileID: 7854287240566403132, guid: 43494336ee54db8448fce4cc8b36e2c7, type: 3}
   bulletTrash: {fileID: 1629114352}
   bulletSpawn: {fileID: 1442179157}
---- !u!114 &371426105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371426096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c66c7ca3bd63a0438eabad9f4d61523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  preFab: {fileID: 7854287240566403132, guid: 43494336ee54db8448fce4cc8b36e2c7, type: 3}
-  preFab2: {fileID: 0}
-  bulletTrash: {fileID: 0}
-  bulletSpawn: {fileID: 0}
 --- !u!1 &396652744
 GameObject:
   m_ObjectHideFlags: 0

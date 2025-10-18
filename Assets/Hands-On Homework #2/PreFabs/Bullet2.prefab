@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3168936550825168947}
@@ -109,8 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7847c2807be79c24f94807fac77b3bf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  deathTime: 1.5
+  speed: 6
+  deathTime: 2.5
   playerBullet: 1
 --- !u!1 &8462168158812703723
 GameObject:
