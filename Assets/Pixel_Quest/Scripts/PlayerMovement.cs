@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxis("Horizontal");
 
-        _rigidbody2D.velocity = new Vector2(horizontal * speed, _rigidbody2D.velocity.y);
+        if(horizontal > 0) { _spriteRenderer.flipX = true;}
+        else if (horizontal < 0) { _spriteRenderer.flipX = false;}
+
+            _rigidbody2D.velocity = new Vector2(horizontal * speed, _rigidbody2D.velocity.y);
     }
 }
