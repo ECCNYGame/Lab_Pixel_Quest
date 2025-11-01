@@ -64483,6 +64483,10 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8384855194911907762, guid: 66e7a201ffd7ff544a92f3c8cd502d4a, type: 3}
+      propertyPath: nextLevel
+      value: Lodge Room
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
