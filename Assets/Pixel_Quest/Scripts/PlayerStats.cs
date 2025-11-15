@@ -4,21 +4,44 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
-{
+{   
+    public Transform respawnPoint;
     public string nextLevel = "GeoLevel_2";
+    private int coinCounter = 0;
+    private int _health = 3;
+    private int _maxHealth = 3;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        switch (collision.tag)
-        {
+    private void OnTriggerEnter2D(Collider2D collision) {
+        switch (collision.tag) {
             case "Finish": {
+                    string nextLevel = collision.transform.GetComponent<LevelGoal>().nextLevel;
                     SceneManager.LoadScene(nextLevel);
                     break;
             }
-            case "Death": {
-                    string thisLevel = SceneManager.GetActiveScene().name;
-                    SceneManager.LoadScene(thisLevel);
+            case "Health": {
+                    if (_health < _maxHealth)
+                    {
+                        Destroy(collision.gameObject);
+                        _health++;
+                    }
+                  break;
+                }
+            case "Coin": {
+                    coinCounter++;
+                    Destroy(collision.gameObject);
                     break;
+                }
+            case "Death": {
+                _health--;
+                    if (_health <= 0)
+                    {
+                        string thisLevel = SceneManager.GetActiveScene().name;
+                        SceneManager.LoadScene(thisLevel);
+                    }
+                    else {
+                        transform.position = respawnPoint.position;
+                    }
+                        break;
             }
         }
     }
