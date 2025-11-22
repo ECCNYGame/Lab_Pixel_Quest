@@ -20,7 +20,6 @@ public class HW3PlayerMovement : MonoBehaviour
         _hw3PlayerDialogue = GetComponent<HW3PlayerDialogue>();    
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (_hw3PlayerDialogue.IsSpeaking())
@@ -37,7 +36,7 @@ public class HW3PlayerMovement : MonoBehaviour
 
         _rigRigidbody2D.velocity = new Vector2(_xVelocity, _yVelocity) * speed;
     }
-
+    //Die and nxt level code
         private void OnTriggerEnter2D(Collider2D collision)
     {
         switch (collision.tag)
